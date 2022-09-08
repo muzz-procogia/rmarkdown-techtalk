@@ -15,7 +15,13 @@ output:
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 ```
-
+```{r eval=FALSE, tidy=FALSE, echo=FALSE}
+remotes::install_github("yihui/xaringan")
+remotes::install_github("gadenbuie/xaringanExtra")
+```
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+```
 # What is RMarkdown?
 
 - R Markdown is a tool we use to create efficient reports to summarize analyses and communicate results to an audience. 
@@ -38,14 +44,7 @@ class: inverse, center, middle
 ---
 
 
-```{r eval=FALSE, tidy=FALSE}
-remotes::install_github("yihui/xaringan")
-remotes::install_github("gadenbuie/xaringanExtra")
-```
 
-```{r xaringan-tile-view, echo=FALSE}
-xaringanExtra::use_tile_view()
-```
 
 --
 
