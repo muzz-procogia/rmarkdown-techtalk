@@ -4,7 +4,7 @@ September 8, 2022 | ProCogia Weekly Tech Talk
 
 ## text for presentation
 
-R Markdown is a tool we use to create efficient reports to summarize analyses and communicate results to an audience. We can create HTML and PDF documents with R Markdown using only R code. R Markdown is also a way to ensure that the results are reproducible, which is important to guarantee when creating reports.
+R Markdown is a tool we use to create efficient reports to summarize analyses and communicate results to an audience. In essence, it interweaves narrative with code to create technical documents. We can create HTML and PDF documents with R Markdown using only R code. R Markdown is also a way to ensure that the results are reproducible, which is important to guarantee when creating reports.
 
 Reproducible results
 Consider the following scenario: you've conducted your analyses and created a presentation to demonstrate the findings.
@@ -20,7 +20,7 @@ When we finish modifying a file and are ready to see the report, we'll need to k
 To get started, we'll add some code by adding a code chunk. A code chunk is a section that contains the code that will either render output in the report or display the code itself as part of the report. Chunks are what separate the text of the report from the code.
 Code chunks start and end
 with a set of three backticks. The first set of backticks signify the beginning of the code chunk
-and are followed by curly braces that include the letter r, to specify that we are adding r code. Within the curly braces, we can specify a number of other chunk options. We'll be discussing the details of this later in the course.
+and are followed by curly braces that include the letter r, to specify that we are adding r code. Within the curly braces, we can specify a number of other chunk options. We'll be discussing the details of this later in the talk.
 
 ## Headers
 Including headers in the report will help clearly label each section. We add headers using a hash and a single space before the text. The more hashes we use, the smaller the header will be.
@@ -28,7 +28,7 @@ Including headers in the report will help clearly label each section. We add hea
 ## Adding headers
 Here we use two hashes for the section called Datasets, and three to label each dataset, Investment Annual Summary and Investment Services Projects. Remember to place the hash at the start of the line and add a single space after the hash before the text. If you include a space or another character before the hash, the header won't render. Notice that the size of each header in the knit file is determined by the number of hashes before the text.
 
-if we want to include text within the code, we add a single hash before the text. This renders the text as a code comment within the code chunk. We'll discuss how and when to include code in the report later in the course.
+if we want to include text within the code, we add a single hash before the text. This renders the text as a code comment within the code chunk. We'll discuss how and when to include code in the report later in the talk.
 
 There are many options for formatting text in a markdown file, including making the text bold, italicized, or strikethrough. To bold the text, we surround it with two sets of asterisks or underscores. To italicize it, we use one set of asterisks or a single set of underscores, and to strikethrough text, we surround the text with two sets of tildes.
 
@@ -41,7 +41,7 @@ We can also add website links to the report. Here, we reference the data source 
 ## YAML header
 The YAML header contains the metadata of the file as key value pairs that correspond to information about the document. It appears at the top of the markdown file and starts and ends with two sets of three hyphens. When we create a new markdown document, by default, it includes the title, the author, and the output format. The title and author are provided as strings. The YAML header requires specific formatting to render, and it's important to use colons after each field, use backticks or list information as strings where required, and avoid adding any extra spaces. After modifying any of the fields in the YAML header, we'll knit the document again to see the changes reflected in the final report.
 
-## The output type of the Markdown file is also specified in the YAML header. Throughout the course, we'll use two different output types, HTML and PDF files. We can switch between these types manually by modifying the output section of the YAML header to indicate either html_document or pdf_document.
+The output type of the Markdown file is also specified in the YAML header. Throughout the talk, we'll use two different output types, HTML and PDF files. We can switch between these types manually by modifying the output section of the YAML header to indicate either html_document or pdf_document.
 
 ## Adding the date manually
 Another piece of information we can add to the YAML header is the date. We can enter this manually by adding the date as a string.
@@ -113,7 +113,7 @@ Let's also create plots for the investment services projects data that we filter
 When we take another look at the indonesia_investment_projects data, we see that it includes a status column, which identifies the project's status as either Pending Approval, on Hold, Active, or Completed. Let's add color equals status, to color each point by project status. This plot provides a lot more clarity because we're able to see the date disclosed, associated investment amount, and status of each project. Notice that the knit file includes a warning message about the data that was excluded. Let's create another plot and continue to explore the data.
 
 ## 7. Visualizing projects in Indonesia in 2012
-We can add another plot using similar code and the data that was filtered for projects in Indonesia in the 2012 fiscal year. When we create this plot and knit the file, we see another warning message that one of the points was removed due to missing values. We'll discuss how to handle these warning messages in the report later in the course, but for now, let's explore why the data was removed.
+We can add another plot using similar code and the data that was filtered for projects in Indonesia in the 2012 fiscal year. When we create this plot and knit the file, we see another warning message that one of the points was removed due to missing values. We'll discuss how to handle these warning messages in the report later in the talk, but for now, let's explore why the data was removed.
 
 ## 8. Missing values
 If we take a closer look at the indonesia_investment_projects_2012 data, we can see each project from the 2012 fiscal year. Notice that the LMS Toll Project is on hold and has no investment values listed, including for the total investment. Since we used the investment amounts to create the plot, and the project is on hold and has no associated investment amounts, the data was excluded from the plot. This is another example of something we may want to include in the text of the report to provide more information to the audience.
@@ -148,7 +148,7 @@ Here, we've used left alignment for the figure and see that this is reflected in
 As we set the options for the figures in each code chunk, we may notice that some code chunk options are repeated throughout the report. When this happens, we may want to consider setting these options globally instead of locally. When we're specifying options locally, we add them to each code chunk and they impact only the code contained in that chunk. If we set the options globally instead, they will apply to all figures throughout the code chunks in the report.
 
 ## 10. Setting options globally
-Notice the code chunk that appears when we create a new Markdown file, at the beginning of the file, in the code chunk named setup. In this chunk, the knitr package is being called with knitr and two colons. The knitr package is what runs each code chunk and knits the document. In this chunk, knitr will use the specified options as global defaults for each chunk in the document when the file is knit. Following opts_chunk dollar sign set(), we can add the options that we want to set globally to the parentheses before the echo equals TRUE argument. For example, here we add fig-dot-align equals left in quotations, and when we knit the report we see the alignment reflected in all figures throughout the document. We'll discuss the include and echo options that appear in this chunk later in the course.
+Notice the code chunk that appears when we create a new Markdown file, at the beginning of the file, in the code chunk named setup. In this chunk, the knitr package is being called with knitr and two colons. The knitr package is what runs each code chunk and knits the document. In this chunk, knitr will use the specified options as global defaults for each chunk in the document when the file is knit. Following opts_chunk dollar sign set(), we can add the options that we want to set globally to the parentheses before the echo equals TRUE argument. For example, here we add fig-dot-align equals left in quotations, and when we knit the report we see the alignment reflected in all figures throughout the document. We'll discuss the include and echo options that appear in this chunk later in the talk.
 
 ## 11. Adding captions
 In addition to modifying the formatting of the figure, we can also add a caption to each figure, using fig-dot-cap and including the caption in quotations. Here, we've added a caption to label the first plot as Figure 1-point-1 and to specify which fiscal years the plot displays.
@@ -191,7 +191,7 @@ Finally, we may want to add a caption to the table, which we can do using the ca
 We've learned how to add, label, and modify code chunks. Now, let's discuss some code chunk options we can use to modify the knit report.
 
 ## 2. The data code chunk
-Let's look at the code chunk we've seen in the exercises throughout the course, called data. The data chunk has loaded the data and packages needed for each exercise.
+Let's look at the code chunk we've seen in the exercises throughout the talk, called data. The data chunk has loaded the data and packages needed for each exercise.
 
 ## 3. The data code chunk
 Notice that, after the code chunk name, we see include equals FALSE inside the curly braces.
@@ -275,7 +275,7 @@ We've discussed a number of options for the YAML header. To summarize, we discus
 # Parameters
 
 ## 1. Creating a report with a parameter
-Throughout the course, we've created reports that present information on the projects in a particular country.
+Throughout the talk, we've created reports that present information on the projects in a particular country.
 
 ## 2. Parameters
 Using the investment_services_projects data, we could create reports for a number of different countries. If we want to create a report for 10 countries from the data, it would require a lot of time and effort to create each report separately and manually edit each report for each country. Instead of manually editing new reports, we can use a parameter to efficiently create new reports that summarize the data for different countries. Parameters are used to create a report with specific values for key inputs that are listed in the YAML header.
@@ -305,7 +305,7 @@ and remove any references to a particular country.
 While reviewing the text, we'll want to edit references to a particular country so that when we knit a new file using the parameter, the file will be consistent with the country we specify.
 
 ## 11. Reviewing the text
-We can modify text, headers, and even the YAML header using syntax we used when adding date formatting to the date field in the YAML header earlier in the course. Where the text or header refers to a specific country name, we can replace the name with, in backticks, the letter r to specify the language and params dollar sign country.
+We can modify text, headers, and even the YAML header using syntax we used when adding date formatting to the date field in the YAML header earlier in the talk. Where the text or header refers to a specific country name, we can replace the name with, in backticks, the letter r to specify the language and params dollar sign country.
 
 ## 12. Reviewing the YAML header
 We'll then review the YAML header and modify the document title to include the country using the parameter. Using the same syntax we used to modify the text and headers, in backticks, we specify r as the language followed by params dollar sign country.
