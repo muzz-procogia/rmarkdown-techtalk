@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Karla:wght@700&family=Overpass:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+
+:root{
+  --light-brown: #EDC7B7;
+  --off-white: #EEE2DC;
+  --grey-fall: #BAB2B5;
+  --indigo-blue: #123C69;
+  --red-spore: #AC3B61
+}
+
+body{
+  font-size:16px;
+  line-height:1.6;
+  font-family:'Inter', sans-serif !important;
+  color:var(--indigo-blue);
+}
+
+.remark__tile-view__tile:hover {
+    background: var(--red-spore);
+    opacity: 1;
+}
+
+.remark__tile-view__tile--current {
+    background: var(--light-brown);
+    border: 5px solid #EDC7B7;
+    margin: calc(0.5em - 5px);
+    border-radius: 0;
+}
+
+.inverse {
+  background-color: var(--off-white);
+  color: var(--red-spore);
+  text-shadow: 0 0 20px #BAB2B5;
+}
+.inverse h1, .inverse h2, .inverse h3 {
+  color: var(--indigo-blue);
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 3px solid #AC3B61;
+}
+
+.remark-code-line:hover:before {
+    content: "\25B6";
+    color: var(--red-spore);
+    position: absolute;
+    transform: translateX(-1.2em);
+    animation: hover 0.66s alternate 8 cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.rcode{
+  background-color: var(--grey-fall);
+  border: 2px solid #BAB2B5;
+  font-weight: bold;
+}
+
+.sqlcode{
+  background-color: var(--light-brown);
+  border: 2px solid #EDC7B7;
+  font-weight: bold;
+}

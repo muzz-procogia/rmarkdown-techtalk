@@ -1,0 +1,380 @@
+/* For global styling */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Karla:wght@700&family=Overpass:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+
+.main-sidebar{
+  background-color: #fff !important;
+}
+
+:root{
+  --light-purple: #f2f3fe;
+  --medium-purple: #7078f1;
+  --dark-purple: #5449ce;
+  --grey-cool: #3A3749;
+}
+
+body{
+  font-size:16px;
+  line-height:1.6;
+  font-family:'Inter', sans-serif !important;
+  color:var(--grey-cool);
+}
+.navbar .navbar-nav, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, label, input, .btn, .nav-tabs>li, select, table{
+  font-family:'Inter', sans-serif !important;
+}
+h1, h2{
+  font-weight:700;
+}
+h3{
+  font-family: 'Karla', sans-serif;
+  font-weight:600;
+}
+.navbar-default{
+  border:none !important;
+  background:none !important;
+}
+.navbar-default .navbar-nav>.active>a{
+  background-color: transparent;
+  position:relative;
+  font-weight: bold;
+}
+.navbar-default .navbar-nav>.active>a:after{
+  position: absolute;
+  margin:auto;
+  content:"";
+  bottom:0;
+  left:0;
+  right:0;
+  width: 50%;
+  background-color:var(--dark-purple);
+  height: 2px;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+  background-color: transparent;
+}
+
+.sidebar{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.shiny-download-link{
+  background-color:var(--dark-purple) !important;
+
+}
+  
+/* Button Styles */
+.btn{
+  padding:0.625rem 1rem;
+  text-decoration:none;  
+  border:none;
+  font-weight:600;
+  border-radius:8px;
+}
+.btn.rounded{
+  border-radius:100px;
+}
+
+.btn.circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.42;
+  border-radius: 15px;
+}
+
+.btn.btn-primary.outline{
+  background-color:var(--light-purple);
+  color:var(--dark-purple);
+  border:1px solid var(--dark-purple);
+}
+.btn.right-arrow::after{
+    background-image: url("data:image/svg+xml,%3Csvg width='8' height='13' viewBox='0 0 8 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.375 1.375L6.625 6.625L1.375 11.875' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    border: none;
+    background-repeat: no-repeat;
+    background-size: 0.1875rem 0.2986rem 0.2292rem 0.4097rem;
+    height: 12px;
+    width: 10px;
+    transition: 250ms all ease;
+    content: " ";
+    margin-left: 0.75rem;
+    display:inline-block;
+}
+.btn.right-arrow:hover::after{
+  transform: translateX(10px);
+}
+.btn.light-purple{
+  background-color:var(--light-purple);
+  color:var(--dark-purple);
+}
+.btn.medium-purple{
+  background-color:var(--medium-purple);
+  color:#FFF;
+}
+.btn.btn-primary, .btn.btn-default{
+  background-color:var(--dark-purple) !important;
+  color:#FFF;
+}
+
+.btn-lg {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+  background-color:var(--dark-purple) !important;
+}
+
+.btn.plus{
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z' fill='white'/%3E%3C/svg%3E%0A");
+  border: none;
+  background-repeat: no-repeat;
+  left: 20.83%;
+  right: 20.83%;
+  top: 20.83%;
+  bottom: 20.83%;
+  background-position: center;
+  transition: 250ms all ease;
+}
+.btn.plus-left{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn.plus-left::before{
+  display: block;
+  height: 12px;
+    width: 12px;
+    margin-right: 0.5rem;
+  border: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+  content:"";
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z' fill='white'/%3E%3C/svg%3E%0A");
+border: none;
+background-repeat: no-repeat;
+transition: 250ms all ease;
+}
+
+.btn-default.primary:hover {
+  color: #FFFFFF;
+  background-color: var(--medium-purple);
+  border-color: #adadad;
+}
+
+.btn-primary:hover {
+  color: #FFFFFF;
+  background-color: var(--medium-purple);
+  border-color: #adadad;
+}
+
+/*need to redo all progress bars for bs4 */
+.progress-bar{
+  background-color:var(--dark-purple);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.progress-bar.medium{
+  background-color:var(--medium-purple);
+}
+
+.progress.bkg{ 
+  background-color: var(--dark-purple);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.rounded-pill {
+  border-radius: 50rem !important;
+}
+
+.rounded-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.42;
+  border-radius: 50% !important;
+}
+
+.btn-sm, .btn-group-sm > .btn {
+  padding: 0.25rem 1.5rem;
+  gap: 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  line-height: 21px;
+}
+
+/* Slider */
+
+.irs--shiny .irs-from, .irs--shiny .irs-to, .irs--shiny .irs-single {
+  color: #fff;
+  text-shadow: none;
+  padding: 1px 3px;
+  background-color: var(--dark-purple) !important;
+  border-radius: 3px;
+  font-size: 11px;
+  line-height: 1.333;
+}
+
+.irs--shiny .irs-bar {
+  top: 25px;
+  height: 8px;
+  border-top: 1px solid var(--dark-purple) !important;
+  border-bottom: 1px solid var(--dark-purple) !important;
+  background: var(--dark-purple) !important;
+}
+
+.irs--shiny .irs-min, .irs--shiny .irs-max {
+  top: 0;
+  padding: 1px 3px;
+  text-shadow: none;
+  background-color: rgb(255 8 8 / 10%);
+  border-radius: 3px;
+  font-size: 10px;
+  line-height: 1.333;
+}
+
+/* Left nav */
+
+.main-sidebar{
+  background-color: #fff !important;
+}
+
+.sidebar{
+  color: #000 !important;
+}
+
+.sidebar-menu{
+  padding: 0.5rem 0.75rem .5rem .5rem
+}
+
+.selectize-dropdown{
+  border: none !important;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.09) !important;
+}
+
+.selectize-dropdown-content {
+  padding: 1.125rem 0.563rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.313rem;
+}
+
+.selectize-dropdown [data-selectable] {
+  cursor: pointer;
+  overflow: visible;
+}
+
+.main-sidebar .user-panel, .sidebar-menu, .sidebar-menu>li.header {
+    white-space: nowrap;
+    overflow: visible;
+}
+
+.selectize-dropdown-content .option.active{
+  background-color: #F2F3FE !important;
+}
+
+/* .selectize-option:hover{
+  background-color: #F2F3FE !important;
+} */
+
+
+.sidebar-menu>li.active>a, .sidebar-menu>li:hover>a {
+  color: #000 !important;
+  background: #EDEEF8 !important;
+  border: none !important;
+}
+
+
+.sidebar-menu>li.active>a {
+  display: flex !important;
+  gap: 8px !important;
+  align-items: center !important;
+  font-weight: 600 !important;
+}
+
+/* Tooltips */
+.popover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1060;
+    display: none;
+    max-width: 276px;
+    padding: 1px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.42857143;
+    line-break: auto;
+    text-align: left;
+    text-align: start;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: none;
+    letter-spacing: normal;
+    word-break: normal;
+    word-spacing: normal;
+    word-wrap: normal;
+    white-space: normal;
+    font-size: 14px;
+    background-color: #251651; /* colour is not included in the colours figma, but in the tooltip figma */
+    background-clip: padding-box;
+    border: 1px solid #251651;
+    border: 1pxsolidrgba(0,0,0,.2);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+    box-shadow: 0 5px 10pxrgba(0,0,0,.2);
+}
+
+.popover-title {
+    padding: 28px 28px 12px 28px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: inherit;
+    border-bottom: 0px solid #251651;
+    color: #D9E2FF;
+}
+
+.popover-content {
+    padding: 0px 28px 12px 28px;
+    color: #F2F3FE; /* 05 purp */
+}
+
+.popover.bottom>.arrow:after {
+  top: 1px;
+  margin-left: -10px;
+  content: " ";
+  border-top-width: 0;
+  border-bottom-color: #251651;
+}
+
+
+/* Font Styles */
+
+h1.karla, h2.karla, h3.karla{
+  font-family: 'Karla', sans-serif;
+}
+
+
+
+/* For our own page */
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
